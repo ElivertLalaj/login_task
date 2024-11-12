@@ -64,6 +64,7 @@ export class LoginComponent {
 
     this.toggleForm();
     console.log("User signed up:", newUser);
+    this.router.navigate(['./login'])
   }
 
   onLoginClick(): void {

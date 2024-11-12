@@ -4,10 +4,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Quicksand', sans-serif;
+  font-family:  ui-monospace;
 }
 body 
 {
+  /* font-family: Arial, Helvetica, sans-serif; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,7 +67,7 @@ section .signin
 {
   position: absolute;
   width: 400px;
-  background: #222;  
+  background: #5f0460;  
   z-index: 1000;
   display: flex;
   justify-content: center;
@@ -88,7 +89,7 @@ section .signin .content
 section .signin .content h2 
 {
   font-size: 2em;
-  color: rgb(110 181 255);
+  color: white;
   text-transform: uppercase;
 }
 section .signin .content .form 
@@ -107,12 +108,12 @@ section .signin .content .form .inputBox input
 {
   position: relative;
   width: 100%;
-  background: #333;
-  border: none;
+  background: #850687;
+  border: 1px solid white;
   outline: none;
   padding: 25px 10px 7.5px;
   border-radius: 4px;
-  color:rgb(110 181 255);
+  color: white;
   font-weight: 500;
   font-size: 1em;
 }
@@ -121,8 +122,7 @@ section .signin .content .form .inputBox i
   position: absolute;
   left: 0;
   padding: 15px 10px;
-  font-style: normal;
-  color:rgb(110 181 255);
+  color:white;
   transition: 0.5s;
   pointer-events: none;
   font-size: 1em;
@@ -132,7 +132,7 @@ section .signin .content .form .inputBox i
 {
   transform: translateY(-7.5px);
   font-size: 1.2em;
-  color: rgb(110 181 255);
+  color: white;
 }
 .signin .content .form .links 
 {
@@ -148,13 +148,13 @@ section .signin .content .form .inputBox i
 }
 .signin .content .form .links a:nth-child(2)
 {
-  color: rgb(110 181 255);
+  color: white;
   font-weight: 600;
 }
 .signin .content .form .inputBox input[type="submit"]
 {
   padding: 10px;
-  background: rgb(110 181 255);
+  background: white;
   color: #000;
   font-weight: 600;
   font-size: 1.35em;

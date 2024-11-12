@@ -18,9 +18,7 @@ export class HomeComponent {
 
   onLogOut() {
     localStorage.removeItem('currentUser');
-  
-  // Redirect to login page
-  this.router.navigate(['/login']);
+    this.router.navigate(['/login']);
   }
   
 }
