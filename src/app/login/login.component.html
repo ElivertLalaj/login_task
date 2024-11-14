@@ -19,6 +19,14 @@
             <input type="password" formControlName="password" required>
             <i>Password</i>
           </div>
+          <div class="inputBox" *ngIf="!isLoginMode">
+            <input type="email" formControlName="email" required>
+            <i>email</i>
+          </div>
+          <div class="inputBox" *ngIf="!isLoginMode">
+            <input type="tel" formControlName="phone_number" required>
+            <i>phone_number</i>
+          </div>
   
           <div class="links" *ngIf="isLoginMode">
             <a href="#">Forgot Password</a>

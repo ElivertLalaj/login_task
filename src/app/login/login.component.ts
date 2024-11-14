@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { IUser } from '../assets/login';
+import { IUserSignUP } from '../assets/login';
 
 
 @Component({
@@ -22,7 +22,7 @@ export class LoginComponent {
   loginForm: FormGroup;
   signupForm: FormGroup;
 
-  user: IUser[] = []
+  user: IUserSignUP[] = []
 
 
   constructor(
@@ -35,7 +35,10 @@ export class LoginComponent {
     });
     this.signupForm = this.fb.group({
       username: ['', Validators.required],
-      password: ['', Validators.required]
+      password: ['', Validators.required],
+      email: ['', Validators.required],
+      phone_number: [0, Validators.required],
+
     });
   }
 
@@ -52,9 +55,11 @@ export class LoginComponent {
   }
 
   onSignupClick() {
-    const newUser: IUser = {
+    const newUser: IUserSignUP = {
       username: this.signupForm.value.username,
-      password: this.signupForm.value.password
+      password: this.signupForm.value.password,
+      email: this.signupForm.value.email,
+      phone_number: this.signupForm.value.phone_number
     };
 
     const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');

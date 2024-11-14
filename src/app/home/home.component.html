@@ -1,13 +1,38 @@
-<p>home works!</p>
+<nav class="navbar navbar-expand-lg" id="desktop" style="background-color: #630d4d;">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex ms-auto" role="search">
+                <button class="btn btn-outline-light" (click)="onLogOut()">LOG OUT</button>
+            </form>
+        </div>
+    </div>
+</nav>
 
-<button 
-style=
-"width: 40%;
-height: 400px;
-background-color: #f2f2f2;
-color: blueviolet;
-border-radius: 20%;
-font-size: 60px;
-margin-inline: 30%;"
-(click)="onLogOut()"
->LOG OUT</button>
+<button id="mobile" class="btn btn-dark  ms-auto" type="button" data-bs-toggle="offcanvas"
+    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+    ☰
+</button>
+
+
+<div class="offcanvas offcanvas-start" id="mobile" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <button class="btn btn-outline-danger" (click)="onLogOut()">LOG OUT</button>
+
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+</div>
+
+
+<h1>Welcome, {{ user }}!</h1>
+
+
+<section>
+    <button type="button" class="generate-button" (click)="onClickGenerateSquare()">generate more squares</button>
+</section>
+<div class="grid" (touchmove)="onTouchMove($event)">
+    <div class="square" *ngFor="let square of squares; let i = index" [class.selected]="square"
+        (click)="toggleSelection(i)" [attr.data-index]="i">
+        {{ i + 1 }}
+    </div>
+</div>

@@ -8,7 +8,6 @@
 }
 body 
 {
-  /* font-family: Arial, Helvetica, sans-serif; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,7 +130,7 @@ section .signin .content .form .inputBox i
 .signin .content .form .inputBox input:valid ~ i
 {
   transform: translateY(-7.5px);
-  font-size: 1.2em;
+  font-size: 0.6em;
   color: white;
 }
 .signin .content .form .links 
